@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title">Weather App</h1>
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <span class="toggle-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name..." class="search-input">
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <button id="locationBtn" class="location-btn">📍 Use My Location</button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error hidden">
+            <p id="errorMessage">Something went wrong. Please try again.</p>
+        </div>
+
+        <!-- Weather Display -->
+        <div id="weatherDisplay" class="weather-display hidden">
+            <div class="weather-card">
+                <!-- Main Weather Info -->
+                <div class="main-weather">
+                    <div class="weather-icon-container">
+                        <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                    </div>
+                    <div class="main-info">
+                        <h2 id="cityName" class="city-name">City Name</h2>
+                        <p id="countryName" class="country-name">Country</p>
+                        <div class="temperature">
+                            <span id="temperature" class="temp-value">--</span>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                        <p id="weatherDescription" class="weather-description">Weather Description</p>
+                    </div>
+                </div>
+
+                <!-- Weather Details -->
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Feels like</span>
+                        <span id="feelsLike" class="detail-value">--°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity" class="detail-value">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="windSpeed" class="detail-value">-- m/s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
